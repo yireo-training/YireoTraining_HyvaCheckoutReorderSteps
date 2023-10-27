@@ -1,0 +1,44 @@
+<?php
+declare(strict_types=1);
+
+use Hyva\Theme\Model\ViewModelRegistry;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+use Hyva\Checkout\ViewModel\Checkout\AddressView;
+use YireoTraining\HyvaCheckoutReorderSteps\Magewire\Checkout\AddressView\ShippingDetails;
+use YireoTraining\HyvaCheckoutReorderSteps\ViewModel\QuoteIsVirtual;
+
+/** @var Template $block */
+/** @var ViewModelRegistry $viewModels */
+/** @var AddressView $addressView */
+/** @var Escaper $escaper */
+/** @var ShippingDetails $magewire */
+
+$addressView = $viewModels->require(AddressView\AddressViewShipping::class);
+$quoteIsVirtual = $viewModels->require(QuoteIsVirtual::class);
+?>
+<div>
+    <?php if (!$quoteIsVirtual->isVirtual()): ?>
+        <div class="flex items-start mb-6 mt-2 p-4 bg-gray-100 rounded-lg"
+             wire:target="billingAsShipping"
+             wire:loading.class="opacity-25"
+        >
+            <label class="inline-flex items-center gap-x-4" for="shipping-as-billing">
+                <input id="shipping-as-billing"
+                       name="shipping-as-shipping"
+                       type="checkbox"
+                       wire:model="billingAsShipping"
+                       wire:loading.attr="disabled"
+                />
+
+                <span class="text-gray-700 font-bold hover:cursor-pointer">
+                    <?= $escaper->escapeHtml(__('My shipping and billing address are the same')) ?>
+                </span>
+            </label>
+        </div>
+    <?php endif ?>
+
+    <?php if (!$magewire->billingAsShipping): ?>
+    <?= /* @noEscape */ $addressView->renderView() ?>
+    <?php endif; ?>
+</div>

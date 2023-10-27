@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Hyva_Checkout:etc/hyva_checkout.xsd"
+>
+    <checkout name="example"
+              label="Yireo Example Checkout"
+              layout="2columns"
+              parent="default"
+    >
+        <step name="payment"
+              label="Payments"
+              route="payment"
+              before="shipping"
+        >
+        </step>
+
+        <step name="shipping"
+              label="Shipping &amp; Review"
+              route="shipping"
+              after="payment"
+        >
+        </step>
+    </checkout>
+</config>
