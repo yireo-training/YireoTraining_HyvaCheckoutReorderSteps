@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace YireoTraining\HyvaCheckoutReorderSteps\Plugin;
+namespace YireoTraining\ExampleHyvaCheckoutReorderSteps\Plugin;
 
 use Hyva\Checkout\Magewire\Checkout\AddressView\BillingDetails;
 use Magento\Checkout\Model\Session as SessionCheckout;

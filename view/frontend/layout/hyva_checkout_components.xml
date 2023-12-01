@@ -4,10 +4,10 @@
     <body>
         <referenceBlock
             name="checkout.billing-details"
-            template="YireoTraining_HyvaCheckoutReorderSteps::checkout/address-view/billing-details.phtml"/>
+            template="YireoTraining_ExampleHyvaCheckoutReorderSteps::checkout/address-view/billing-details.phtml"/>
 
         <referenceBlock
             name="checkout.shipping-details"
-            template="YireoTraining_HyvaCheckoutReorderSteps::checkout/address-view/shipping-details.phtml"/>
+            template="YireoTraining_ExampleHyvaCheckoutReorderSteps::checkout/address-view/shipping-details.phtml"/>
     </body>
 </page>

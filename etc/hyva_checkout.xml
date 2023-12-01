@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Hyva_Checkout:etc/hyva_checkout.xsd"
 >
     <checkout name="example"
-              label="Yireo Example Checkout"
+              label="Yireo Example with Reordered Steps"
               layout="2columns"
               parent="default"
     >
@@ -14,11 +14,13 @@
         >
         </step>
 
+        <!--
         <step name="shipping"
               label="Shipping &amp; Review"
               route="shipping"
               after="payment"
         >
         </step>
+        -->
     </checkout>
 </config>

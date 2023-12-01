@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace YireoTraining\HyvaCheckoutReorderSteps\ViewModel;
+namespace YireoTraining\ExampleHyvaCheckoutReorderSteps\ViewModel;
 
 use Magento\Checkout\Model\Session as SessionCheckout;
 use Magento\Framework\View\Element\Block\ArgumentInterface;

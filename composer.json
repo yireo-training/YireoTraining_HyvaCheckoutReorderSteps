@@ -7,14 +7,14 @@
     "magento/framework": "*"
   },
   "license": [
-    "Proprietary"
+    "OSL-3.0"
   ],
   "autoload": {
     "files": [
       "registration.php"
     ],
     "psr-4": {
-      "YireoTraining\\HyvaCheckoutReorderSteps\\": ""
+      "YireoTraining\\ExampleHyvaCheckoutReorderSteps\\": ""
     }
   }
 }

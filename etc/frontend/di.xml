@@ -2,22 +2,23 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Hyva\Checkout\Magewire\Checkout\AddressView\ShippingDetails"
-                type="YireoTraining\HyvaCheckoutReorderSteps\Magewire\Checkout\AddressView\ShippingDetails"/>
+                type="YireoTraining\ExampleHyvaCheckoutReorderSteps\Magewire\Checkout\AddressView\ShippingDetails"/>
 
     <type name="Hyva\Checkout\Magewire\Checkout\AddressView\BillingDetails">
-        <plugin name="YireoTraining_HyvaCheckoutReorderSteps::disableBillingAsShipping"
-                type="YireoTraining\HyvaCheckoutReorderSteps\Plugin\DisableBillingAsShipping"/>
+        <plugin name="YireoTraining_ExampleHyvaCheckoutReorderSteps::disableBillingAsShipping"
+                type="YireoTraining\ExampleHyvaCheckoutReorderSteps\Plugin\DisableBillingAsShipping"/>
     </type>
 
     <type name="Hyva\Checkout\Model\Form\EntityForm\EavAttributeShippingAddressForm">
         <arguments>
             <argument name="entityFormModifiers" xsi:type="array">
-                <item name="YireoTraining_HyvaCheckoutReorderSteps::formModifier" xsi:type="object">YireoTraining\HyvaCheckoutReorderSteps\Form\ShippingAddressFormModifier</item>
+                <item name="YireoTraining_ExampleHyvaCheckoutReorderSteps::formModifier" xsi:type="object">YireoTraining
+                    \ExampleHyvaCheckoutReorderSteps\Form\ShippingAddressFormModifier</item>
             </argument>
         </arguments>
     </type>
     <type name="Hyva\Checkout\ViewModel\Checkout\AddressRenderer">
-        <plugin name="YireoTraining_HyvaCheckoutReorderSteps::fixRenderAddress"
-                type="YireoTraining\HyvaCheckoutReorderSteps\Plugin\FixRenderAddress"/>
+        <plugin name="YireoTraining_ExampleHyvaCheckoutReorderSteps::fixRenderAddress"
+                type="YireoTraining\ExampleHyvaCheckoutReorderSteps\Plugin\FixRenderAddress"/>
     </type>
 </config>

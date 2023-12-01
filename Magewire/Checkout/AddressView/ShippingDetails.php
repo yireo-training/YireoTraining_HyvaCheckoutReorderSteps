@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace YireoTraining\HyvaCheckoutReorderSteps\Magewire\Checkout\AddressView;
+namespace YireoTraining\ExampleHyvaCheckoutReorderSteps\Magewire\Checkout\AddressView;
 
 use Hyva\Checkout\Magewire\Checkout\AddressView\ShippingDetails as OriginalShippingDetails;
 use Magento\Checkout\Model\Session as SessionCheckout;

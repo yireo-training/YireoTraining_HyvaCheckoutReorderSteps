@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace YireoTraining\HyvaCheckoutReorderSteps\Form;
+namespace YireoTraining\ExampleHyvaCheckoutReorderSteps\Form;
 
 use Hyva\Checkout\Magewire\Checkout\AddressView\MagewireAddressFormInterface;
 use Hyva\Checkout\Model\Form\EntityFormInterface;
@@ -17,7 +17,7 @@ class ShippingAddressFormModifier implements EntityFormModifierInterface
     public function apply(EntityFormInterface $form): EntityFormInterface
     {
         $form->registerModificationListener(
-            'YireoTraining_HyvaCheckoutReorderSteps::formInit',
+            'YireoTraining_ExampleHyvaCheckoutReorderSteps::formInit',
             'form:init',
             function(EntityFormInterface $form) {
                 return $form;
@@ -25,7 +25,7 @@ class ShippingAddressFormModifier implements EntityFormModifierInterface
         );
 
         $form->registerModificationListener(
-            'YireoTraining_HyvaCheckoutReorderSteps::formFill',
+            'YireoTraining_ExampleHyvaCheckoutReorderSteps::formFill',
             'form:fill',
             function(EntityFormInterface $form) {
             }
